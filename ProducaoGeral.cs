@@ -16,5 +16,24 @@ namespace FazendaUrbanaDesktop
         {
             InitializeComponent();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            producaoListBox.Items.Add($"Produto: {produtoBox.Text} | Origem: R${origemBox.Text} | Tipo: {tipoBox.Text} | Quantidade: {quantidadeBox.Text}");
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            Menu menu = new Menu();
+            menu.Show();
+
+            this.Hide();
+        }
     }
 }

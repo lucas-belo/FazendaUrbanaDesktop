@@ -37,6 +37,14 @@ namespace FazendaUrbanaDesktop
         {
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ProducaoGeral producaoGeral = new ProducaoGeral();
+            producaoGeral.Show();
+
+            this.Hide();
+        }
     }
     }
 
