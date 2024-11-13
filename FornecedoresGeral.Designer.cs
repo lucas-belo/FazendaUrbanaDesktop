@@ -239,7 +239,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fornecedoresListBox);
             this.Name = "FornecedoresGeral";
-            this.Text = "FornecedoresGeral";
+            this.Text = "Fornecedores";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

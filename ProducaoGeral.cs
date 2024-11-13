@@ -24,7 +24,7 @@ namespace FazendaUrbanaDesktop
 
         private void button6_Click(object sender, EventArgs e)
         {
-            producaoListBox.Items.Add($"Produto: {produtoBox.Text} | Origem: R${origemBox.Text} | Tipo: {tipoBox.Text} | Quantidade: {quantidadeBox.Text}");
+            producaoListBox.Items.Add($"Produto: {produtoBox.Text} | Origem: {origemBox.Text} | Tipo: {tipoBox.Text} | Quantidade: {quantidadeBox.Text}");
 
         }
 
