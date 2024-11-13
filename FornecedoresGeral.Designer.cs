@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.produtosBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.telefoneBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -42,8 +44,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.fornecedoresListBox = new System.Windows.Forms.ListBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.produtosBox = new System.Windows.Forms.TextBox();
+            this.remover = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -68,6 +69,22 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(454, 788);
             this.panel1.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(69, 564);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(49, 13);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Produtos";
+            // 
+            // produtosBox
+            // 
+            this.produtosBox.Location = new System.Drawing.Point(69, 583);
+            this.produtosBox.Name = "produtosBox";
+            this.produtosBox.Size = new System.Drawing.Size(212, 20);
+            this.produtosBox.TabIndex = 13;
             // 
             // label7
             // 
@@ -198,27 +215,27 @@
             this.fornecedoresListBox.Size = new System.Drawing.Size(654, 484);
             this.fornecedoresListBox.TabIndex = 15;
             // 
-            // label8
+            // remover
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(69, 564);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(49, 13);
-            this.label8.TabIndex = 14;
-            this.label8.Text = "Produtos";
-            // 
-            // produtosBox
-            // 
-            this.produtosBox.Location = new System.Drawing.Point(69, 583);
-            this.produtosBox.Name = "produtosBox";
-            this.produtosBox.Size = new System.Drawing.Size(212, 20);
-            this.produtosBox.TabIndex = 13;
+            this.remover.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.remover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.remover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.remover.ForeColor = System.Drawing.Color.Transparent;
+            this.remover.Location = new System.Drawing.Point(500, 607);
+            this.remover.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.remover.Name = "remover";
+            this.remover.Size = new System.Drawing.Size(103, 43);
+            this.remover.TabIndex = 15;
+            this.remover.Text = "Remover fornecedor";
+            this.remover.UseVisualStyleBackColor = false;
+            this.remover.Click += new System.EventHandler(this.remover_Click);
             // 
             // FornecedoresGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 662);
+            this.Controls.Add(this.remover);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.fornecedoresListBox);
             this.Name = "FornecedoresGeral";
@@ -247,5 +264,6 @@
         private System.Windows.Forms.ListBox fornecedoresListBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox produtosBox;
+        private System.Windows.Forms.Button remover;
     }
 }

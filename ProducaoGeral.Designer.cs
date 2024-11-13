@@ -42,6 +42,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.producaoListBox = new System.Windows.Forms.ListBox();
+            this.remover = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -195,11 +196,27 @@
             this.producaoListBox.Size = new System.Drawing.Size(654, 484);
             this.producaoListBox.TabIndex = 13;
             // 
+            // remover
+            // 
+            this.remover.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.remover.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.remover.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.remover.ForeColor = System.Drawing.Color.Transparent;
+            this.remover.Location = new System.Drawing.Point(504, 585);
+            this.remover.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.remover.Name = "remover";
+            this.remover.Size = new System.Drawing.Size(103, 43);
+            this.remover.TabIndex = 16;
+            this.remover.Text = "Remover producao";
+            this.remover.UseVisualStyleBackColor = false;
+            this.remover.Click += new System.EventHandler(this.remover_Click);
+            // 
             // ProducaoGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 654);
+            this.Controls.Add(this.remover);
             this.Controls.Add(this.producaoListBox);
             this.Controls.Add(this.panel1);
             this.Name = "ProducaoGeral";
@@ -226,5 +243,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.ListBox producaoListBox;
+        private System.Windows.Forms.Button remover;
     }
 }

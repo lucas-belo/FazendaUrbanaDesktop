@@ -30,5 +30,10 @@ namespace FazendaUrbanaDesktop
             fornecedoresListBox.Items.Add($"Fornecedor: {fornecedorBox.Text} | CPF/CNPJ: {cpfCnpjBox.Text}| E-mail: {emailBox.Text} | Telefone: {telefoneBox.Text} | Produtos: {produtosBox.Text}");
 
         }
+
+        private void remover_Click(object sender, EventArgs e)
+        {
+            fornecedoresListBox.Items.RemoveAt(fornecedoresListBox.Items.IndexOf(fornecedoresListBox.SelectedItem));
+        }
     }
 }

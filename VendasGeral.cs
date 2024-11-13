@@ -34,5 +34,11 @@ namespace FazendaUrbanaDesktop
 
             this.Hide();
         }
+
+        private void remover_Click(object sender, EventArgs e)
+        {
+            vendasListBox.Items.RemoveAt(vendasListBox.Items.IndexOf(vendasListBox.SelectedItem));
+
+        }
     }
 }
