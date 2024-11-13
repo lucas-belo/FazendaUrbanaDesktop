@@ -45,6 +45,14 @@ namespace FazendaUrbanaDesktop
 
             this.Hide();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            FornecedoresGeral fornecedoresGeral = new FornecedoresGeral();
+            fornecedoresGeral.Show();
+
+            this.Hide();
+        }
     }
     }
 
