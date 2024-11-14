@@ -43,8 +43,13 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.fornecedoresListBox = new System.Windows.Forms.ListBox();
             this.remover = new System.Windows.Forms.Button();
+            this.fornecedoresListView = new System.Windows.Forms.ListView();
+            this.Fornecedor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.CpfCnpj = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Email = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Telefone = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Produtos = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -197,24 +202,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Fornecedores";
             // 
-            // fornecedoresListBox
-            // 
-            this.fornecedoresListBox.AllowDrop = true;
-            this.fornecedoresListBox.ColumnWidth = 10;
-            this.fornecedoresListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.fornecedoresListBox.FormattingEnabled = true;
-            this.fornecedoresListBox.HorizontalScrollbar = true;
-            this.fornecedoresListBox.ItemHeight = 20;
-            this.fornecedoresListBox.Items.AddRange(new object[] {
-            "[EXEMPLO] Fornecedor: XPTO Alimentos | CPF/CNPJ: 12345678910 | E-mail: contato@xp" +
-                "toalimentos.com | Telefone: 11 123456789 | Produtos: Verduras"});
-            this.fornecedoresListBox.Location = new System.Drawing.Point(500, 108);
-            this.fornecedoresListBox.Name = "fornecedoresListBox";
-            this.fornecedoresListBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.fornecedoresListBox.ScrollAlwaysVisible = true;
-            this.fornecedoresListBox.Size = new System.Drawing.Size(654, 484);
-            this.fornecedoresListBox.TabIndex = 15;
-            // 
             // remover
             // 
             this.remover.BackColor = System.Drawing.Color.DarkSlateGray;
@@ -230,14 +217,58 @@
             this.remover.UseVisualStyleBackColor = false;
             this.remover.Click += new System.EventHandler(this.remover_Click);
             // 
+            // fornecedoresListView
+            // 
+            this.fornecedoresListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Fornecedor,
+            this.CpfCnpj,
+            this.Email,
+            this.Telefone,
+            this.Produtos});
+            this.fornecedoresListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.fornecedoresListView.FullRowSelect = true;
+            this.fornecedoresListView.GridLines = true;
+            this.fornecedoresListView.HideSelection = false;
+            this.fornecedoresListView.Location = new System.Drawing.Point(500, 70);
+            this.fornecedoresListView.Name = "fornecedoresListView";
+            this.fornecedoresListView.Size = new System.Drawing.Size(633, 485);
+            this.fornecedoresListView.TabIndex = 16;
+            this.fornecedoresListView.UseCompatibleStateImageBehavior = false;
+            this.fornecedoresListView.View = System.Windows.Forms.View.Details;
+            // 
+            // Fornecedor
+            // 
+            this.Fornecedor.Text = "Fornecedor";
+            this.Fornecedor.Width = 130;
+            // 
+            // CpfCnpj
+            // 
+            this.CpfCnpj.Text = "CpfCnpj";
+            this.CpfCnpj.Width = 130;
+            // 
+            // Email
+            // 
+            this.Email.Text = "Email";
+            this.Email.Width = 130;
+            // 
+            // Telefone
+            // 
+            this.Telefone.Text = "Telefone";
+            this.Telefone.Width = 130;
+            // 
+            // Produtos
+            // 
+            this.Produtos.Text = "Produtos";
+            this.Produtos.Width = 130;
+            // 
             // FornecedoresGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1174, 662);
+            this.Controls.Add(this.fornecedoresListView);
             this.Controls.Add(this.remover);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.fornecedoresListBox);
             this.Name = "FornecedoresGeral";
             this.Text = "Fornecedores";
             this.panel1.ResumeLayout(false);
@@ -261,9 +292,14 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox fornecedoresListBox;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox produtosBox;
         private System.Windows.Forms.Button remover;
+        private System.Windows.Forms.ListView fornecedoresListView;
+        private System.Windows.Forms.ColumnHeader Fornecedor;
+        private System.Windows.Forms.ColumnHeader CpfCnpj;
+        private System.Windows.Forms.ColumnHeader Email;
+        private System.Windows.Forms.ColumnHeader Telefone;
+        private System.Windows.Forms.ColumnHeader Produtos;
     }
 }

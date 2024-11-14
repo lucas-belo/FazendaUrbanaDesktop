@@ -41,8 +41,12 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.producaoListBox = new System.Windows.Forms.ListBox();
             this.remover = new System.Windows.Forms.Button();
+            this.producaoListView = new System.Windows.Forms.ListView();
+            this.Produto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Origem = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Tipo = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,25 +180,7 @@
             this.label1.Size = new System.Drawing.Size(138, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Produção";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // producaoListBox
-            // 
-            this.producaoListBox.AllowDrop = true;
-            this.producaoListBox.ColumnWidth = 10;
-            this.producaoListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.producaoListBox.FormattingEnabled = true;
-            this.producaoListBox.HorizontalScrollbar = true;
-            this.producaoListBox.ItemHeight = 20;
-            this.producaoListBox.Items.AddRange(new object[] {
-            "[EXEMPLO] Produto: Banana | Origem: Salvador/Bahia | Tipo: Fruta | Quantidade: 20" +
-                "0"});
-            this.producaoListBox.Location = new System.Drawing.Point(504, 71);
-            this.producaoListBox.Name = "producaoListBox";
-            this.producaoListBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.producaoListBox.ScrollAlwaysVisible = true;
-            this.producaoListBox.Size = new System.Drawing.Size(654, 484);
-            this.producaoListBox.TabIndex = 13;
+            this.label1.Click += new System.EventHandler(this.label3_Click);
             // 
             // remover
             // 
@@ -211,13 +197,51 @@
             this.remover.UseVisualStyleBackColor = false;
             this.remover.Click += new System.EventHandler(this.remover_Click);
             // 
+            // producaoListView
+            // 
+            this.producaoListView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Produto,
+            this.Origem,
+            this.Tipo,
+            this.Quantidade});
+            this.producaoListView.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.producaoListView.FullRowSelect = true;
+            this.producaoListView.GridLines = true;
+            this.producaoListView.HideSelection = false;
+            this.producaoListView.Location = new System.Drawing.Point(504, 73);
+            this.producaoListView.Name = "producaoListView";
+            this.producaoListView.Size = new System.Drawing.Size(663, 469);
+            this.producaoListView.TabIndex = 17;
+            this.producaoListView.UseCompatibleStateImageBehavior = false;
+            this.producaoListView.View = System.Windows.Forms.View.Details;
+            // 
+            // Produto
+            // 
+            this.Produto.Text = "Produto";
+            this.Produto.Width = 180;
+            // 
+            // Origem
+            // 
+            this.Origem.Text = "Origem";
+            this.Origem.Width = 180;
+            // 
+            // Tipo
+            // 
+            this.Tipo.Text = "Tipo";
+            this.Tipo.Width = 180;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.Text = "Quantidade";
+            this.Quantidade.Width = 180;
+            // 
             // ProducaoGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1217, 654);
+            this.Controls.Add(this.producaoListView);
             this.Controls.Add(this.remover);
-            this.Controls.Add(this.producaoListBox);
             this.Controls.Add(this.panel1);
             this.Name = "ProducaoGeral";
             this.Text = "Producao";
@@ -242,7 +266,11 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox producaoListBox;
         private System.Windows.Forms.Button remover;
+        private System.Windows.Forms.ListView producaoListView;
+        private System.Windows.Forms.ColumnHeader Produto;
+        private System.Windows.Forms.ColumnHeader Origem;
+        private System.Windows.Forms.ColumnHeader Tipo;
+        private System.Windows.Forms.ColumnHeader Quantidade;
     }
 }

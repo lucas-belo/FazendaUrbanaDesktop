@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.quantidadeBox = new System.Windows.Forms.TextBox();
@@ -41,9 +42,18 @@
             this.button6 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.vendasListBox = new System.Windows.Forms.ListBox();
+            this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.fazendaUrbanaDBDataSet = new FazendaUrbanaDesktop.FazendaUrbanaDBDataSet();
             this.remover = new System.Windows.Forms.Button();
+            this.vendasTableAdapter = new FazendaUrbanaDesktop.FazendaUrbanaDBDataSetTableAdapters.VendasTableAdapter();
+            this.listViewVendas = new System.Windows.Forms.ListView();
+            this.Vendedor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Produto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.ValorVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaUrbanaDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -177,22 +187,15 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Vendas";
             // 
-            // vendasListBox
+            // vendasBindingSource
             // 
-            this.vendasListBox.AllowDrop = true;
-            this.vendasListBox.ColumnWidth = 10;
-            this.vendasListBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vendasListBox.FormattingEnabled = true;
-            this.vendasListBox.HorizontalScrollbar = true;
-            this.vendasListBox.ItemHeight = 20;
-            this.vendasListBox.Items.AddRange(new object[] {
-            "[EXEMPLO] Vendedor: Test | Produto: Test | Valor: R$100,00 | Quantidade: 3"});
-            this.vendasListBox.Location = new System.Drawing.Point(465, 53);
-            this.vendasListBox.Name = "vendasListBox";
-            this.vendasListBox.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.vendasListBox.ScrollAlwaysVisible = true;
-            this.vendasListBox.Size = new System.Drawing.Size(654, 484);
-            this.vendasListBox.TabIndex = 10;
+            this.vendasBindingSource.DataMember = "Vendas";
+            this.vendasBindingSource.DataSource = this.fazendaUrbanaDBDataSet;
+            // 
+            // fazendaUrbanaDBDataSet
+            // 
+            this.fazendaUrbanaDBDataSet.DataSetName = "FazendaUrbanaDBDataSet";
+            this.fazendaUrbanaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // remover
             // 
@@ -209,18 +212,64 @@
             this.remover.UseVisualStyleBackColor = false;
             this.remover.Click += new System.EventHandler(this.remover_Click);
             // 
+            // vendasTableAdapter
+            // 
+            this.vendasTableAdapter.ClearBeforeFill = true;
+            // 
+            // listViewVendas
+            // 
+            this.listViewVendas.Activation = System.Windows.Forms.ItemActivation.TwoClick;
+            this.listViewVendas.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Vendedor,
+            this.Produto,
+            this.ValorVenda,
+            this.Quantidade});
+            this.listViewVendas.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.listViewVendas.FullRowSelect = true;
+            this.listViewVendas.GridLines = true;
+            this.listViewVendas.HideSelection = false;
+            this.listViewVendas.Location = new System.Drawing.Point(465, 69);
+            this.listViewVendas.Name = "listViewVendas";
+            this.listViewVendas.Size = new System.Drawing.Size(653, 465);
+            this.listViewVendas.TabIndex = 18;
+            this.listViewVendas.UseCompatibleStateImageBehavior = false;
+            this.listViewVendas.View = System.Windows.Forms.View.Details;
+            // 
+            // Vendedor
+            // 
+            this.Vendedor.Text = "Vendedor";
+            this.Vendedor.Width = 180;
+            // 
+            // Produto
+            // 
+            this.Produto.Text = "Produto";
+            this.Produto.Width = 180;
+            // 
+            // ValorVenda
+            // 
+            this.ValorVenda.Text = "ValorVenda";
+            this.ValorVenda.Width = 180;
+            // 
+            // Quantidade
+            // 
+            this.Quantidade.Text = "Quantidade";
+            this.Quantidade.Width = 180;
+            // 
             // VendasGeral
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1149, 605);
+            this.Controls.Add(this.listViewVendas);
             this.Controls.Add(this.remover);
-            this.Controls.Add(this.vendasListBox);
             this.Controls.Add(this.panel1);
             this.Name = "VendasGeral";
             this.Text = "Vendas";
+            this.Load += new System.EventHandler(this.VendasGeral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.fazendaUrbanaDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -232,7 +281,6 @@
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox vendasListBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.TextBox quantidadeBox;
         private System.Windows.Forms.Label label6;
@@ -242,5 +290,13 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox vendedorBox;
         private System.Windows.Forms.Button remover;
+        private FazendaUrbanaDBDataSet fazendaUrbanaDBDataSet;
+        private System.Windows.Forms.BindingSource vendasBindingSource;
+        private FazendaUrbanaDBDataSetTableAdapters.VendasTableAdapter vendasTableAdapter;
+        private System.Windows.Forms.ListView listViewVendas;
+        private System.Windows.Forms.ColumnHeader Vendedor;
+        private System.Windows.Forms.ColumnHeader Produto;
+        private System.Windows.Forms.ColumnHeader ValorVenda;
+        private System.Windows.Forms.ColumnHeader Quantidade;
     }
 }
