@@ -43,17 +43,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.vendasBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.fazendaUrbanaDBDataSet = new FazendaUrbanaDesktop.FazendaUrbanaDBDataSet();
             this.remover = new System.Windows.Forms.Button();
-            this.vendasTableAdapter = new FazendaUrbanaDesktop.FazendaUrbanaDBDataSetTableAdapters.VendasTableAdapter();
             this.listViewVendas = new System.Windows.Forms.ListView();
             this.Vendedor = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Produto = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.ValorVenda = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.Quantidade = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaUrbanaDBDataSet)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -190,12 +186,6 @@
             // vendasBindingSource
             // 
             this.vendasBindingSource.DataMember = "Vendas";
-            this.vendasBindingSource.DataSource = this.fazendaUrbanaDBDataSet;
-            // 
-            // fazendaUrbanaDBDataSet
-            // 
-            this.fazendaUrbanaDBDataSet.DataSetName = "FazendaUrbanaDBDataSet";
-            this.fazendaUrbanaDBDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // remover
             // 
@@ -211,11 +201,6 @@
             this.remover.Text = "Remover venda";
             this.remover.UseVisualStyleBackColor = false;
             this.remover.Click += new System.EventHandler(this.remover_Click);
-            // 
-            // vendasTableAdapter
-            // 
-            this.vendasTableAdapter.ClearBeforeFill = true;
-            // 
             // listViewVendas
             // 
             this.listViewVendas.Activation = System.Windows.Forms.ItemActivation.TwoClick;
@@ -268,8 +253,6 @@
             this.Load += new System.EventHandler(this.VendasGeral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.vendasBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.fazendaUrbanaDBDataSet)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -290,9 +273,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox vendedorBox;
         private System.Windows.Forms.Button remover;
-        private FazendaUrbanaDBDataSet fazendaUrbanaDBDataSet;
         private System.Windows.Forms.BindingSource vendasBindingSource;
-        private FazendaUrbanaDBDataSetTableAdapters.VendasTableAdapter vendasTableAdapter;
         private System.Windows.Forms.ListView listViewVendas;
         private System.Windows.Forms.ColumnHeader Vendedor;
         private System.Windows.Forms.ColumnHeader Produto;

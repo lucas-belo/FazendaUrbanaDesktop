@@ -62,11 +62,6 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database\Manager.cs" />
-    <Compile Include="FazendaUrbanaDBDataSet.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>FazendaUrbanaDBDataSet.xsd</DependentUpon>
-    </Compile>
     <Compile Include="Forms\FornecedoresGeral\FornecedoresGeral.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -123,17 +118,6 @@
     <EmbeddedResource Include="Forms\VendasGeral\VendasGeral.resx">
       <DependentUpon>VendasGeral.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="FazendaUrbanaDBDataSet.xsc">
-      <DependentUpon>FazendaUrbanaDBDataSet.xsd</DependentUpon>
-    </None>
-    <None Include="FazendaUrbanaDBDataSet.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>FazendaUrbanaDBDataSet.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="FazendaUrbanaDBDataSet.xss">
-      <DependentUpon>FazendaUrbanaDBDataSet.xsd</DependentUpon>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
