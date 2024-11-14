@@ -40,7 +40,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.fornecedorBox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
+            this.addFornecedorButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.remover = new System.Windows.Forms.Button();
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.fornecedorBox);
             this.panel1.Controls.Add(this.label3);
-            this.panel1.Controls.Add(this.button6);
+            this.panel1.Controls.Add(this.addFornecedorButton);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-9, -63);
@@ -167,20 +167,20 @@
             this.label3.Text = "Voltar";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
-            // button6
+            // addFornecedorButton
             // 
-            this.button6.BackColor = System.Drawing.Color.DarkSlateGray;
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button6.ForeColor = System.Drawing.Color.Transparent;
-            this.button6.Location = new System.Drawing.Point(69, 639);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(103, 30);
-            this.button6.TabIndex = 3;
-            this.button6.Text = "Novo fornecedor";
-            this.button6.UseVisualStyleBackColor = false;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.addFornecedorButton.BackColor = System.Drawing.Color.DarkSlateGray;
+            this.addFornecedorButton.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addFornecedorButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addFornecedorButton.ForeColor = System.Drawing.Color.Transparent;
+            this.addFornecedorButton.Location = new System.Drawing.Point(69, 639);
+            this.addFornecedorButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.addFornecedorButton.Name = "addFornecedorButton";
+            this.addFornecedorButton.Size = new System.Drawing.Size(103, 30);
+            this.addFornecedorButton.TabIndex = 3;
+            this.addFornecedorButton.Text = "Novo fornecedor";
+            this.addFornecedorButton.UseVisualStyleBackColor = false;
+            this.addFornecedorButton.Click += new System.EventHandler(this.addFornecedorButton_Click);
             // 
             // label2
             // 
@@ -271,6 +271,8 @@
             this.Controls.Add(this.panel1);
             this.Name = "FornecedoresGeral";
             this.Text = "Fornecedores";
+            this.Load += new System.EventHandler(this.FornecedoresGeral_Load);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
@@ -289,7 +291,7 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox fornecedorBox;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button addFornecedorButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label8;

@@ -245,6 +245,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "ProducaoGeral";
             this.Text = "Producao";
+            this.Load += new System.EventHandler(this.ProducaoGeral_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);

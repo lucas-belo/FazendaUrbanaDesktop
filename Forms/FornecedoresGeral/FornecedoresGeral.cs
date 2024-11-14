@@ -44,7 +44,7 @@ namespace FazendaUrbanaDesktop
             }
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void addFornecedorButton_Click(object sender, EventArgs e)
         {
             string fornecedor = fornecedorBox.Text;
             string cpfCnpj = cpfCnpjBox.Text;
